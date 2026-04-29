@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bkbu65bumeami" path="res://resources/sprites/knight.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://c8cu0x25lx758" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="AudioStream" uid="uid://c2336k4ri6q5j" path="res://resources/sounds/jump.wav" id="3_qhqgy"]
+[ext_resource type="Script" uid="uid://devgtarpm8fwk" path="res://scripts/run_effect.gd" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("1_3vyb7")
@@ -208,7 +209,13 @@ autoplay = "repose"
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_fjrip")
 
-[node name="SoundJump" type="AudioStreamPlayer2D" parent="." unique_id=407779997]
+[node name="SoundJump" type="AudioStreamPlayer" parent="." unique_id=344660101]
 stream = ExtResource("3_qhqgy")
 volume_db = -20.0
 bus = &"SoundEffects"
+
+[node name="RunEffect" type="Node" parent="." unique_id=2047101473]
+script = ExtResource("4_dqkch")
+
+[node name="TimerRunEffect" type="Timer" parent="RunEffect" unique_id=1620208760]
+one_shot = true

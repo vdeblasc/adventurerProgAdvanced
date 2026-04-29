@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var timer: Timer = $Timer
-@onready var sound_death: AudioStreamPlayer2D = $SoundDeath
+@onready var sound_death: AudioStreamPlayer = $SoundDeath
 
 #recibe señal de que el jugador murio
 func _on_body_entered(body: Node2D) -> void:

@@ -2,11 +2,18 @@ extends CharacterBody2D
 
 
 const SPEED = 130.0
+const RUN_SPEED = 195.5
 const JUMP_VELOCITY = -300.0
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var sound_jump: AudioStreamPlayer2D = $SoundJump
+@onready var sound_jump: AudioStreamPlayer = $SoundJump
 
+
+var must_run : bool = false
+signal run_effect
+
+func start_run_effect() -> void:
+	run_effect.emit()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -34,7 +41,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.play("jump")	
 		
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = direction * (RUN_SPEED if must_run or Input.is_action_pressed("run") else SPEED)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 

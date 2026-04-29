@@ -11,7 +11,7 @@ script = ExtResource("1_orvjg")
 wait_time = 0.6
 one_shot = true
 
-[node name="SoundDeath" type="AudioStreamPlayer2D" parent="." unique_id=186062364]
+[node name="SoundDeath" type="AudioStreamPlayer" parent="." unique_id=2119315907]
 stream = ExtResource("2_f04b3")
 volume_db = -10.0
 bus = &"SoundEffects"

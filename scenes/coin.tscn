@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cecbfnwmse47i" path="res://scripts/coin.gd" id="1_i64fm"]
 [ext_resource type="Texture2D" uid="uid://b3foa47stkwgh" path="res://resources/sprites/coin.png" id="1_rwqht"]
 [ext_resource type="AudioStream" uid="uid://cqaj1lp7amta8" path="res://resources/sounds/coin.wav" id="3_11l1o"]
+[ext_resource type="Script" uid="uid://baiedwjcpn3i1" path="res://scripts/animation_coin_destruction.gd" id="4_d14el"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i64fm"]
 atlas = ExtResource("1_rwqht")
@@ -111,10 +112,12 @@ frame_progress = 0.44367433
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=316929587]
 shape = SubResource("CircleShape2D_ssuvv")
 
-[node name="MusicCoin" type="AudioStreamPlayer2D" parent="." unique_id=1562582849]
+[node name="MusicCoin" type="AudioStreamPlayer" parent="." unique_id=143516626]
 stream = ExtResource("3_11l1o")
 volume_db = -15.0
 bus = &"SoundEffects"
 
+[node name="AnimationCoinDestruction" type="Node" parent="." unique_id=1820871155]
+script = ExtResource("4_d14el")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="finished" from="MusicCoin" to="." method="_on_music_coin_finished"]
