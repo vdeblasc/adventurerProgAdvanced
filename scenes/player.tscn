@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://devgtarpm8fwk" path="res://scripts/run_effect.gd" id="4_dqkch"]
 [ext_resource type="Material" uid="uid://b2u4s53b8ty0v" path="res://materials/powerUP_material.tres" id="5_qlg0r"]
 [ext_resource type="Script" uid="uid://di2fkp2c2ce1r" path="res://jump.gd" id="6_tuyoq"]
+[ext_resource type="Script" uid="uid://6wax0swnsuds" path="res://escape.gd" id="7_fjrip"]
+[ext_resource type="Script" uid="uid://c1k7wnwy6xcsl" path="res://change_display_mode.gd" id="8_smehm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("1_3vyb7")
@@ -229,3 +231,9 @@ bus = &"SoundEffects"
 [node name="CoyoteTimer" type="Timer" parent="Jump" unique_id=647785422]
 
 [node name="BufferJumpTimer" type="Timer" parent="Jump" unique_id=199434576]
+
+[node name="Escape" type="Node" parent="." unique_id=1449910732]
+script = ExtResource("7_fjrip")
+
+[node name="ChangeDisplayMode" type="Node" parent="." unique_id=1675823738]
+script = ExtResource("8_smehm")
