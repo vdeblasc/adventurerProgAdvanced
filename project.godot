@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="aventureroProgAvan"
+config/name="adventurerProgAdvanced"
 run/main_scene="uid://bh3rnaun5tpqu"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
@@ -26,6 +26,8 @@ Music="*uid://cb8rij70wyee6"
 [file_customization]
 
 folder_colors={
+"res://executables/": "purple",
+"res://materials/": "blue",
 "res://resources/": "red",
 "res://scenes/": "green",
 "res://scripts/": "yellow"

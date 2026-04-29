@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b2u4s53b8ty0v"]
+
+[ext_resource type="Shader" uid="uid://b6dwegl7qotdp" path="res://shaders/sahder_powerUP.tres" id="1_hdcs7"]
+
+[resource]
+shader = ExtResource("1_hdcs7")
+shader_parameter/Color = Color(1, 1, 0, 1)
+shader_parameter/Velocity = 20.0

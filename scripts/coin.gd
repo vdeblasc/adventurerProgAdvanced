@@ -8,7 +8,7 @@ extends Area2D
 var autoDestruction : bool = true
 signal play_destruction_animation
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	game_manager.add_score()
 	music_coin.play()
 	collision_shape_2d.call_deferred("set", "disabled", true)

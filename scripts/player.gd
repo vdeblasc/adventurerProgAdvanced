@@ -3,11 +3,9 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const RUN_SPEED = 195.5
-const JUMP_VELOCITY = -300.0
+
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var sound_jump: AudioStreamPlayer = $SoundJump
-
 
 var must_run : bool = false
 signal run_effect
@@ -20,10 +18,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-		sound_jump.play()
+	
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -46,3 +41,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+func active_material(new_material : Material) -> void:
+	animated_sprite_2d.material = new_material
+	
+func upward_momentum(amount_of_impulse: float) -> void:
+	velocity.y = -amount_of_impulse
+	

@@ -1,0 +1,59 @@
+[gd_resource type="VisualShader" format=3 uid="uid://b6dwegl7qotdp"]
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_amdtp"]
+parameter_name = "Color"
+default_value_enabled = true
+default_value = Color(1, 1, 0, 1)
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_ddqaw"]
+parameter_name = "Velocity"
+default_value_enabled = true
+default_value = 20.0
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_amdtp"]
+source = 2
+
+[sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_670ar"]
+default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(1, 1, 1), 2, Vector3(0, 0, 0)]
+op_type = 3
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_dklq1"]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_o2hlr"]
+function = 0
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_3v7rn"]
+default_input_values = [0, 0.0, 1, 1.0]
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_wfbvi"]
+default_input_values = [0, 0.0, 1, 2.0]
+operator = 3
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_dwnxv"]
+default_input_values = [0, 0.0, 1, 10.0]
+operator = 2
+
+[resource]
+mode = 1
+flags/light_only = false
+nodes/vertex/0/position = Vector2(780, 240)
+nodes/vertex/4/node = SubResource("VisualShaderNodeMix_670ar")
+nodes/vertex/4/position = Vector2(520, 240)
+nodes/vertex/5/node = SubResource("VisualShaderNodeInput_dklq1")
+nodes/vertex/5/position = Vector2(-620, 700)
+nodes/vertex/6/node = SubResource("VisualShaderNodeFloatFunc_o2hlr")
+nodes/vertex/6/position = Vector2(-200, 700)
+nodes/vertex/7/node = SubResource("VisualShaderNodeFloatOp_3v7rn")
+nodes/vertex/7/position = Vector2(-20, 680)
+nodes/vertex/8/node = SubResource("VisualShaderNodeFloatOp_wfbvi")
+nodes/vertex/8/position = Vector2(140, 680)
+nodes/vertex/9/node = SubResource("VisualShaderNodeFloatOp_dwnxv")
+nodes/vertex/9/position = Vector2(-360, 680)
+nodes/vertex/10/node = SubResource("VisualShaderNodeColorParameter_amdtp")
+nodes/vertex/10/position = Vector2(40, 400)
+nodes/vertex/11/node = SubResource("VisualShaderNodeFloatParameter_ddqaw")
+nodes/vertex/11/position = Vector2(-660, 820)
+nodes/vertex/12/node = SubResource("VisualShaderNodeTexture_amdtp")
+nodes/vertex/12/position = Vector2(120, 40)
+nodes/vertex/connections = PackedInt32Array(4, 0, 0, 2, 6, 0, 7, 0, 7, 0, 8, 0, 5, 0, 9, 0, 9, 0, 6, 0, 10, 0, 4, 1, 11, 0, 9, 1, 12, 0, 4, 0, 8, 0, 4, 2)

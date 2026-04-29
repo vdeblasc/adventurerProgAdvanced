@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dkdh34g2fbm8"]
+
+[ext_resource type="Texture2D" uid="uid://c3oy0h5xa43yr" path="res://resources/sprites/Muelle.png" id="1_pi7v4"]
+[ext_resource type="Script" uid="uid://cibjyc6r7swop" path="res://dock.gd" id="2_uvgon"]
+[ext_resource type="AudioStream" uid="uid://bolsdjlw1g40e" path="res://resources/sounds/muelle.wav" id="3_0n4n6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvgon"]
+atlas = ExtResource("1_pi7v4")
+region = Rect2(0, 0, 16, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n4n6"]
+atlas = ExtResource("1_pi7v4")
+region = Rect2(18, 0, 16, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm2c5"]
+atlas = ExtResource("1_pi7v4")
+region = Rect2(36, 0, 16, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqimr"]
+atlas = ExtResource("1_pi7v4")
+region = Rect2(0, 0, 16, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_chi5d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvgon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n4n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gm2c5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n4n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvgon")
+}],
+"loop": false,
+"name": &"activated",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqimr")
+}],
+"loop": false,
+"name": &"deactivated",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pi7v4"]
+size = Vector2(14, 4)
+
+[node name="Dock" type="AnimatedSprite2D" unique_id=1991276944]
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_chi5d")
+animation = &"activated"
+frame = 4
+frame_progress = 1.0
+offset = Vector2(0, -0.5)
+script = ExtResource("2_uvgon")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=314191140]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=437926138]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_pi7v4")
+
+[node name="SoundDock" type="AudioStreamPlayer" parent="." unique_id=1588350237]
+stream = ExtResource("3_0n4n6")
+volume_db = -25.0
+bus = &"SoundEffects"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -226,6 +226,4 @@ stream = ExtResource("3_qhqgy")
 volume_db = -20.0
 bus = &"SoundEffects"
 
-[node name="CoyoteTimer" type="Timer" parent="Jump" unique_id=647785422]
-
-[node name="BufferJumpTimer" type="Timer" parent="Jump" unique_id=199434576]
+[node name="CoyoteTime" type="Timer" parent="Jump" unique_id=647785422]
