@@ -370,5 +370,13 @@ text = "¡Lo conseguiste!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="bottle" parent="." unique_id=410404379 instance=ExtResource("10_yyrhe")]
-position = Vector2(184, 73)
+[node name="Bottle" type="Node2D" parent="." unique_id=436588745]
+
+[node name="bottle3" parent="Bottle" unique_id=1181306759 instance=ExtResource("10_yyrhe")]
+position = Vector2(104, 72)
+
+[node name="bottle2" parent="Bottle" unique_id=1364550720 instance=ExtResource("10_yyrhe")]
+position = Vector2(712, 57)
+
+[node name="bottle" parent="Bottle" unique_id=410404379 instance=ExtResource("10_yyrhe")]
+position = Vector2(328, 40)
