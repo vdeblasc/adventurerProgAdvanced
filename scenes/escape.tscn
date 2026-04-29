@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c7l071364yb1i"]
+
+[ext_resource type="Script" uid="uid://6wax0swnsuds" path="res://escape.gd" id="1_fu77f"]
+
+[node name="Escape" type="Node" unique_id=387257169]
+script = ExtResource("1_fu77f")

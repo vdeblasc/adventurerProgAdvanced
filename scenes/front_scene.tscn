@@ -1,0 +1,196 @@
+[gd_scene format=4 uid="uid://0qj5utu5ogoh"]
+
+[ext_resource type="PackedScene" uid="uid://bhqemcdxdmr2y" path="res://scenes/hud_front_scene.tscn" id="1_g5cv0"]
+[ext_resource type="PackedScene" uid="uid://c7l071364yb1i" path="res://scenes/escape.tscn" id="2_4tkki"]
+[ext_resource type="PackedScene" uid="uid://c442nomix7x4q" path="res://scenes/change_display_mode.tscn" id="3_bkuqt"]
+[ext_resource type="Texture2D" uid="uid://bkbu65bumeami" path="res://resources/sprites/knight.png" id="4_bkuqt"]
+[ext_resource type="TileSet" uid="uid://dimjsdx1mki0w" path="res://resources/tilesets/tilesets.tres" id="4_dns5v"]
+
+[sub_resource type="Animation" id="Animation_dns5v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9, 3)]
+}
+
+[sub_resource type="Animation" id="Animation_3s1ag"]
+resource_name = "movement"
+length = 14.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 14),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(9, 3), Vector2(-800, 3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u6hha"]
+_data = {
+&"RESET": SubResource("Animation_dns5v"),
+&"movement": SubResource("Animation_3s1ag")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dns5v"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3s1ag"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6hha"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_achg1"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvqvv"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuirk"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkx04"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo16g"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt3i2"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3xl8"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iasl5"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ew7si"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnro6"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ank7y"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnl6j"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(192, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d0wq"]
+atlas = ExtResource("4_bkuqt")
+region = Rect2(224, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_31x28"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dns5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3s1ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6hha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_achg1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvqvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uuirk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkx04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo16g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt3i2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3xl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iasl5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ew7si")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnro6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ank7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnl6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d0wq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="front_scene" type="Node2D" unique_id=1020284743]
+
+[node name="HUD_front_scene" parent="." unique_id=1471398064 instance=ExtResource("1_g5cv0")]
+
+[node name="Escape" parent="." unique_id=387257169 instance=ExtResource("2_4tkki")]
+
+[node name="ChangeDisplayMode" parent="." unique_id=1738059649 instance=ExtResource("3_bkuqt")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1383570238]
+position = Vector2(0, -5)
+zoom = Vector2(6, 6)
+limit_bottom = 160
+
+[node name="TileMapLayerSky" type="TileMapLayer" parent="." unique_id=376457170]
+tile_map_data = PackedByteArray("AAD7/wIAAAAAAAsAAAD8/wIAAAAAAAsAAAD9/wIAAAAAAAsAAAD+/wIAAAAAAAsAAAD//wIAAAAAAAsAAAAAAAIAAAAAAAsAAAABAAIAAAAAAAsAAAACAAIAAAAAAAsAAAADAAIAAAAAAAsAAAAEAAIAAAAAAAsAAAAEAAEAAAAAAAsAAAADAAEAAAAAAAsAAAADAAAAAAAAAAsAAAADAP//AAAAAAsAAAADAP7/AAAAAAsAAAAEAP7/AAAAAAsAAAAEAP//AAAAAAsAAAAEAAAAAAAAAAsAAAAEAP3/AAAAAAsAAAAEAPz/AAAAAAsAAAADAPz/AAAAAAsAAAACAPz/AAAAAAsAAAABAPz/AAAAAAsAAAAAAPz/AAAAAAsAAAD///z/AAAAAAsAAAD+//z/AAAAAAsAAAD+//3/AAAAAAsAAAD9//3/AAAAAAsAAAD8//3/AAAAAAsAAAD8//z/AAAAAAsAAAD7//z/AAAAAAsAAAD7//3/AAAAAAsAAAD7//7/AAAAAAsAAAD7////AAAAAAsAAAD7/wAAAAAAAAsAAAD7/wEAAAAAAAsAAAD8/wEAAAAAAAsAAAD9/wEAAAAAAAsAAAD9/wAAAAAAAAsAAAD8////AAAAAAsAAAD8//7/AAAAAAsAAAD8/wAAAAAAAAsAAAD9//7/AAAAAAsAAAD9////AAAAAAsAAAD9//z/AAAAAAsAAAD+//7/AAAAAAsAAAD+////AAAAAAsAAAD+/wAAAAAAAAsAAAD+/wEAAAAAAAsAAAD//wEAAAAAAAsAAAD//wAAAAAAAAsAAAD/////AAAAAAsAAAD///7/AAAAAAsAAAAAAP7/AAAAAAsAAAAAAP3/AAAAAAsAAAD///3/AAAAAAsAAAABAP7/AAAAAAsAAAABAP3/AAAAAAsAAAACAP3/AAAAAAsAAAADAP3/AAAAAAsAAAACAP7/AAAAAAsAAAABAP//AAAAAAsAAAAAAP//AAAAAAsAAAACAP//AAAAAAsAAAACAAAAAAAAAAsAAAABAAAAAAAAAAsAAAAAAAAAAAAAAAsAAAACAAEAAAAAAAsAAAABAAEAAAAAAAsAAAAAAAEAAAAAAAsAAAD+/wMAAAAAAAsAAAD9/wMAAAAAAAsAAAD8/wMAAAAAAAsAAAD7/wMAAAAAAAsAAAD//wMAAAAAAAsAAAAAAAMAAAAAAAsAAAABAAMAAAAAAAsAAAACAAMAAAAAAAsAAAADAAMAAAAAAAsAAAAEAAMAAAAAAAsAAAAFAPz/AAAAAAsAAAAFAP3/AAAAAAsAAAAFAP7/AAAAAAsAAAAFAP//AAAAAAsAAAAFAAAAAAAAAAsAAAAFAAIAAAAAAAsAAAAFAAMAAAAAAAsAAAAFAAEAAAAAAAsAAAD6/wMAAAAAAAsAAAD6/wIAAAAAAAsAAAD6/wEAAAAAAAsAAAD6//7/AAAAAAsAAAD6//3/AAAAAAsAAAD6//z/AAAAAAsAAAD6////AAAAAAsAAAD6/wAAAAAAAAsAAAD3//r/AAAAAAsAAAD3//v/AAAAAAsAAAD3//z/AAAAAAsAAAD3//3/AAAAAAsAAAD3//7/AAAAAAsAAAD3////AAAAAAsAAAD3/wAAAAAAAAsAAAD3/wEAAAAAAAsAAAD3/wIAAAAAAAsAAAD3/wMAAAAAAAsAAAD3/wQAAAAAAAsAAAD3/wUAAAAAAAsAAAD4//r/AAAAAAsAAAD4//v/AAAAAAsAAAD4//z/AAAAAAsAAAD4//3/AAAAAAsAAAD4//7/AAAAAAsAAAD4////AAAAAAsAAAD4/wAAAAAAAAsAAAD4/wEAAAAAAAsAAAD4/wIAAAAAAAsAAAD4/wMAAAAAAAsAAAD4/wQAAAAAAAsAAAD4/wUAAAAAAAsAAAD5//r/AAAAAAsAAAD5//v/AAAAAAsAAAD5//z/AAAAAAsAAAD5//3/AAAAAAsAAAD5//7/AAAAAAsAAAD5////AAAAAAsAAAD5/wAAAAAAAAsAAAD5/wEAAAAAAAsAAAD5/wIAAAAAAAsAAAD5/wMAAAAAAAsAAAD5/wQAAAAAAAsAAAD5/wUAAAAAAAsAAAD6//r/AAAAAAsAAAD6//v/AAAAAAsAAAD6/wQAAAAAAAsAAAD6/wUAAAAAAAsAAAD7//r/AAAAAAsAAAD7//v/AAAAAAsAAAD7/wQAAAAAAAsAAAD7/wUAAAAAAAsAAAD8//r/AAAAAAsAAAD8//v/AAAAAAsAAAD8/wQAAAAAAAsAAAD8/wUAAAAAAAsAAAD9//r/AAAAAAsAAAD9//v/AAAAAAsAAAD9/wQAAAAAAAsAAAD9/wUAAAAAAAsAAAD+//r/AAAAAAsAAAD+//v/AAAAAAsAAAD+/wQAAAAAAAsAAAD+/wUAAAAAAAsAAAD///r/AAAAAAsAAAD///v/AAAAAAsAAAD//wQAAAAAAAsAAAD//wUAAAAAAAsAAAAAAPr/AAAAAAsAAAAAAPv/AAAAAAsAAAAAAAQAAAAAAAsAAAAAAAUAAAAAAAsAAAABAPr/AAAAAAsAAAABAPv/AAAAAAsAAAABAAQAAAAAAAsAAAABAAUAAAAAAAsAAAACAPr/AAAAAAsAAAACAPv/AAAAAAsAAAACAAQAAAAAAAsAAAACAAUAAAAAAAsAAAADAPr/AAAAAAsAAAADAPv/AAAAAAsAAAADAAQAAAAAAAsAAAADAAUAAAAAAAsAAAAEAPr/AAAAAAsAAAAEAPv/AAAAAAsAAAAEAAQAAAAAAAsAAAAEAAUAAAAAAAsAAAAFAPr/AAAAAAsAAAAFAPv/AAAAAAsAAAAFAAQAAAAAAAsAAAAFAAUAAAAAAAsAAAAGAPr/AAAAAAsAAAAGAPv/AAAAAAsAAAAGAPz/AAAAAAsAAAAGAP3/AAAAAAsAAAAGAP7/AAAAAAsAAAAGAP//AAAAAAsAAAAGAAAAAAAAAAsAAAAGAAEAAAAAAAsAAAAGAAIAAAAAAAsAAAAGAAMAAAAAAAsAAAAGAAQAAAAAAAsAAAAGAAUAAAAAAAsAAAAHAPr/AAAAAAsAAAAHAPv/AAAAAAsAAAAHAPz/AAAAAAsAAAAHAP3/AAAAAAsAAAAHAP7/AAAAAAsAAAAHAP//AAAAAAsAAAAHAAAAAAAAAAsAAAAHAAEAAAAAAAsAAAAHAAIAAAAAAAsAAAAHAAMAAAAAAAsAAAAHAAQAAAAAAAsAAAAHAAUAAAAAAAsAAAAIAPr/AAAAAAsAAAAIAPv/AAAAAAsAAAAIAPz/AAAAAAsAAAAIAP3/AAAAAAsAAAAIAP7/AAAAAAsAAAAIAP//AAAAAAsAAAAIAAAAAAAAAAsAAAAIAAEAAAAAAAsAAAAIAAIAAAAAAAsAAAAIAAMAAAAAAAsAAAAIAAQAAAAAAAsAAAAIAAUAAAAAAAsAAAA=")
+tile_set = ExtResource("4_dns5v")
+
+[node name="TileMapLayerScene" type="TileMapLayer" parent="." unique_id=492224887]
+position = Vector2(9, 3)
+tile_map_data = PackedByteArray("AAD8/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAIAAAAHAAEAAAAAAAIAAAAIAAEAAAAAAAIAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAALAAEAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAEAAAAAAARAAEAAAAAAAAAAAASAAEAAAAEAAAAAAATAAEAAAAEAAAAAAAUAAEAAAAEAAAAAAAVAAEAAAAAAAAAAAD7/wEAAAAAAAAAAAD6/wEAAAAAAAAAAAD5/wEAAAAAAAAAAAAAAAIAAAAHAAEAAAABAAIAAAAHAAEAAAAMAAIAAAAHAAEAAAAQAAIAAAAHAAEAAAD5/wIAAAAAAAEAAAD6/wIAAAAAAAEAAAD7/wIAAAAAAAEAAAD8/wIAAAAAAAEAAAD9/wIAAAAAAAEAAAACAAIAAAAAAAEAAAADAAIAAAAAAAEAAAAEAAIAAAAAAAEAAAAKAAIAAAAAAAEAAAALAAIAAAAAAAEAAAAOAAIAAAAAAAEAAAAPAAIAAAAAAAEAAAARAAIAAAAAAAEAAAASAAIAAAAAAAEAAAATAAIAAAAAAAEAAAAUAAIAAAAAAAEAAAAVAAIAAAABAAEAAAAWAAIAAAABAAEAAAAXAAIAAAAAAAEAAAAYAAIAAAAAAAEAAAAZAAIAAAAAAAEAAAAWAAEAAAAEAAAAAAAXAAEAAAAEAAAAAAAYAAEAAAAEAAAAAAAaAAEAAAAEAAAAAAAbAAEAAAAEAAAAAAAZAAEAAAAEAAAAAAD+/wIAAAAFAAEAAAANAAIAAAAFAAEAAAAFAAIAAAABAAEAAAAaAAIAAAABAAEAAAAbAAIAAAABAAEAAAAMAAEAAAAEAAAAAAAPAAEAAAAEAAAAAAAQAAEAAAAAAAAAAAADAAAAAAAAAAUAAAADAP//AAAAAAQAAAADAP7/AAAAAAMAAAAAAAAAAAAIAAMAAAABAAAAAAABAAYAAAAJAAAAAAABAAYAAAANAAAAAAABAAYAAAAUAAAAAAAHAAYAAAAVAAAAAAAAAAUAAAAVAP//AAAAAAQAAAAVAP7/AAAAAAMAAAAYAAAAAAAHAAcAAAAZAAAAAAAIAAcAAAAcAAEAAAAAAAAAAAAdAAEAAAAAAAAAAAAhAAEAAAAAAAAAAAAiAAEAAAAAAAAAAAAgAAEAAAAAAAAAAAAfAAEAAAAAAAAAAAAeAAEAAAAAAAAAAAAcAAIAAAAHAAEAAAAdAAIAAAAHAAEAAAAeAAIAAAAHAAEAAAAfAAIAAAABAAEAAAAgAAIAAAABAAAAAAAhAAIAAAAFAAEAAAAiAAIAAAAFAAEAAAAdAAAAAAADAAgAAAAdAP//AAADAAcAAAAdAP7/AAADAAYAAAAdAP3/AAADAAUAAAAcAP3/AAACAAUAAAAeAP3/AAAEAAUAAAAdAPz/AAADAAQAAAAcAP7/AAACAAYAAAAeAP7/AAAEAAYAAAAQAAAAAAABAAUAAAD7/wAAAAABAAUAAAD6/wAAAAABAAYAAAAEAAAAAAAGAAUAAAAEAP//AAAGAAQAAAAEAP7/AAAGAAMAAAAcAAAAAAABAAYAAAAgAAAAAAAAAAUAAAAgAP//AAAAAAQAAAAgAP7/AAAAAAMAAAAjAAEAAAAJAAAAAAAkAAEAAAAKAAAAAAAlAAEAAAALAAAAAAAmAAEAAAAAAAAAAAAnAAEAAAAAAAAAAAAoAAEAAAAAAAAAAAApAAEAAAAAAAAAAAAqAAEAAAAAAAAAAAAnAAAAAAAHAAgAAAAmAAIAAAABAAAAAAAnAAIAAAABAAAAAAAoAAIAAAAAAAEAAAApAAIAAAAAAAEAAAAqAAIAAAAAAAEAAAArAAAAAAABAAUAAAArAAEAAAAAAAAAAAArAAIAAAAAAAEAAAAsAAEAAAAAAAAAAAAsAAIAAAAAAAEAAAAtAAEAAAAAAAAAAAAtAAIAAAAAAAEAAAAuAAEAAAAAAAAAAAAuAAIAAAAFAAEAAAAvAAEAAAAAAAAAAAAvAAIAAAAFAAAAAAAwAAAAAAAIAAMAAAAwAAEAAAAAAAAAAAAwAAIAAAAHAAEAAAAxAAAAAAABAAYAAAAxAAEAAAAAAAAAAAAxAAIAAAAHAAEAAAAyAAEAAAAAAAAAAAAyAAIAAAAAAAEAAAAzAP7/AAAAAAMAAAAzAP//AAAAAAQAAAAzAAAAAAAAAAUAAAAzAAEAAAAAAAAAAAAzAAIAAAAAAAEAAAA0AP7/AAAGAAMAAAA0AP//AAAGAAQAAAA0AAAAAAAGAAUAAAA0AAEAAAAAAAAAAAA0AAIAAAAAAAEAAAD//wIAAAAFAAAAAAAqAAAAAAABAAYAAAA1AAEAAAAAAAAAAAA1AAIAAAABAAEAAAA2AAEAAAAAAAIAAAA3AAEAAAAAAAIAAAA4AAEAAAAAAAIAAAD3/wAAAAAHAAgAAAD3/wEAAAAAAAAAAAD3/wIAAAABAAAAAAD4/wEAAAAAAAAAAAD4/wIAAAAAAAEAAAA=")
+tile_set = ExtResource("4_dns5v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMapLayerScene" unique_id=2141046548]
+libraries/ = SubResource("AnimationLibrary_u6hha")
+autoplay = &"movement"
+
+[node name="playerRunning" type="AnimatedSprite2D" parent="." unique_id=1982591845]
+position = Vector2(-45, 7)
+sprite_frames = SubResource("SpriteFrames_31x28")
+autoplay = "default"

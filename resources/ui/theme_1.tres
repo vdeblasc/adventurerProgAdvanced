@@ -1,0 +1,18 @@
+[gd_resource type="Theme" format=3 uid="uid://7p3lgf4cq2v7"]
+
+[ext_resource type="FontFile" uid="uid://cyg4kcgv1ykq5" path="res://resources/fonts/PixelOperator8-Bold.ttf" id="1_0splm"]
+[ext_resource type="StyleBox" uid="uid://bmtsqudeu66hr" path="res://resources/ui/button_start.tres" id="2_8ei8w"]
+[ext_resource type="StyleBox" uid="uid://4y1twrbbg04k" path="res://resources/ui/button_disabled.tres" id="2_sa80f"]
+[ext_resource type="StyleBox" uid="uid://rs00k84albww" path="res://resources/ui/button_hover.tres" id="3_qao4d"]
+[ext_resource type="StyleBox" uid="uid://bu4yll1oe2tdg" path="res://resources/ui/button_pressed.tres" id="5_j56br"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 0.5019608)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/fonts/font = ExtResource("1_0splm")
+Button/styles/disabled = ExtResource("2_sa80f")
+Button/styles/hover = ExtResource("3_qao4d")
+Button/styles/normal = ExtResource("2_8ei8w")
+Button/styles/pressed = ExtResource("5_j56br")

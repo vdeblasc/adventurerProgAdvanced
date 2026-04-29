@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bhqemcdxdmr2y"]
+
+[ext_resource type="Theme" uid="uid://7p3lgf4cq2v7" path="res://resources/ui/theme_1.tres" id="1_cwjrt"]
+[ext_resource type="Script" uid="uid://dm7bmlyjytho3" path="res://scripts/hud_front_scene.gd" id="1_nctyp"]
+[ext_resource type="PackedScene" uid="uid://bh3rnaun5tpqu" path="res://scenes/scene_01.tscn" id="2_nnlqf"]
+
+[node name="HUD_front_scene" type="CanvasLayer" unique_id=1471398064]
+script = ExtResource("1_nctyp")
+scene_to_charge = ExtResource("2_nnlqf")
+
+[node name="ButtonStart" type="Button" parent="." unique_id=257775350]
+anchors_preset = -1
+anchor_left = 0.28
+anchor_top = 0.37500003
+anchor_right = 0.28
+anchor_bottom = 0.37500003
+offset_left = 179.44
+offset_top = -46.000015
+offset_right = 333.94
+offset_bottom = -10.000015
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme = ExtResource("1_cwjrt")
+text = "Comenzar"
+
+[node name="ButtonExit" type="Button" parent="." unique_id=1629838702]
+anchors_preset = -1
+anchor_left = 0.28800002
+anchor_top = 0.293
+anchor_right = 0.28800002
+anchor_bottom = 0.293
+offset_left = 173.72397
+offset_top = 87.13599
+offset_right = 322.72397
+offset_bottom = 122.13599
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme = ExtResource("1_cwjrt")
+text = "Salir"
+
+[node name="ButtonContinue" type="Button" parent="." unique_id=761335029]
+anchors_preset = -1
+anchor_left = 0.28
+anchor_top = 0.455
+anchor_right = 0.28
+anchor_bottom = 0.455
+offset_left = 181.94
+offset_top = -58.839996
+offset_right = 332.94
+offset_bottom = -22.839996
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme = ExtResource("1_cwjrt")
+disabled = true
+text = "Continuar
+"
+
+[connection signal="pressed" from="ButtonStart" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="ButtonExit" to="." method="_on_button_exit_pressed"]
+[connection signal="pressed" from="ButtonContinue" to="." method="_on_button_continue_pressed"]
