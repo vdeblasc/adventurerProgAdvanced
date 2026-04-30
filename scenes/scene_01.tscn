@@ -220,6 +220,7 @@ _data = {
 }
 
 [node name="Scene1" type="Node2D" unique_id=1167644313]
+position = Vector2(-38, 1)
 metadata/_edit_vertical_guides_ = [-520.0]
 
 [node name="HUD" parent="." unique_id=818442567 instance=ExtResource("1_p86k1")]
