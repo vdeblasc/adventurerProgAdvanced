@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://di2fkp2c2ce1r" path="res://jump.gd" id="6_tuyoq"]
 [ext_resource type="PackedScene" uid="uid://c7l071364yb1i" path="res://scenes/escape.tscn" id="7_smehm"]
 [ext_resource type="PackedScene" uid="uid://c442nomix7x4q" path="res://scenes/change_display_mode.tscn" id="8_ur7pv"]
+[ext_resource type="Script" uid="uid://snd5ojskuj6m" path="res://scripts/checkpoint.gd" id="9_ur7pv"]
+[ext_resource type="AudioStream" uid="uid://da5barcv7mk42" path="res://resources/sounds/252083__pepingrillin__spawn.ogg" id="10_y4r1p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("1_3vyb7")
@@ -235,3 +237,10 @@ bus = &"SoundEffects"
 [node name="Escape" parent="." unique_id=387257169 instance=ExtResource("7_smehm")]
 
 [node name="ChangeDisplayMode" parent="." unique_id=1738059649 instance=ExtResource("8_ur7pv")]
+
+[node name="Checkpoint" type="Node" parent="." unique_id=1043768696]
+script = ExtResource("9_ur7pv")
+
+[node name="SoundRespawn" type="AudioStreamPlayer" parent="Checkpoint" unique_id=1154949969]
+stream = ExtResource("10_y4r1p")
+bus = &"SoundEffects"

@@ -12,6 +12,7 @@ const PITCH_EFFECT_POWERUP_NORMAL : float = 1
 func _ready() -> void:
 	player.run_effect.connect(_on_player_run_effect)
 	timer_run_effect.timeout.connect(_on_timeout)
+	player.respawn_player_time.connect(_on_player_respawn)
 	restore_pitch_normal()
 	
 func _on_player_run_effect() -> void:
@@ -29,3 +30,8 @@ func _on_timeout() -> void:
 	
 func restore_pitch_normal() -> void:
 	Music.pitch_scale = PITCH_EFFECT_POWERUP_NORMAL
+
+func _on_player_respawn() -> void:
+	if timer_run_effect.time_left > 0:
+		timer_run_effect.stop()
+		timer_run_effect.emit_signal("timeout")

@@ -24,7 +24,7 @@ func _ready()->void:
 	
 func _physics_process(_delta: float) -> void:
 	# Handle jump.
-	if Input.is_action_just_pressed("jump"):
+	if InputManager.is_action_just_pressed("jump"):
 		if (player.is_on_floor() or inside_coyote_time):
 			jump()
 		else:

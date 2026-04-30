@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://8dqsfkcrdg36"]
+
+[ext_resource type="Texture2D" uid="uid://dwfqd4b8meivd" path="res://resources/sprites/world_tileset.png" id="1_jdf6h"]
+[ext_resource type="Script" uid="uid://b53px1nb06hc3" path="res://scenes/sign_checkpoint.tscn.gd" id="2_ro4k8"]
+[ext_resource type="AudioStream" uid="uid://da5barcv7mk42" path="res://resources/sounds/252083__pepingrillin__spawn.ogg" id="3_k73ni"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ro4k8"]
+size = Vector2(12, 12)
+
+[node name="SignCheckpoint" type="Sprite2D" unique_id=6584174]
+texture = ExtResource("1_jdf6h")
+region_enabled = true
+region_rect = Rect2(128.03625, 48.02172, 15.890106, 16.150589)
+script = ExtResource("2_ro4k8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=48535308]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=910652630]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ro4k8")
+
+[node name="SoundCheckpointOn" type="AudioStreamPlayer" parent="." unique_id=2000735230]
+stream = ExtResource("3_k73ni")
+bus = &"SoundEffects"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
