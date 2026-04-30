@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://birgext3j1ci6" path="res://scenes/platform.tscn" id="3_o2il5"]
 [ext_resource type="PackedScene" uid="uid://b0o51ervbcifk" path="res://scenes/coin.tscn" id="4_nnx6g"]
 [ext_resource type="PackedScene" uid="uid://dkv42t7ygwhgh" path="res://scenes/death_zone.tscn" id="5_mxulj"]
+[ext_resource type="PackedScene" uid="uid://8dqsfkcrdg36" path="res://scenes/sing_checkpoint.tscn" id="6_3yl1h"]
 [ext_resource type="PackedScene" uid="uid://dqr5r80cdoouk" path="res://scenes/enemy.tscn" id="6_wtt3i"]
 [ext_resource type="FontFile" uid="uid://birlasfkpd2tv" path="res://resources/fonts/PixelOperator8.ttf" id="7_hxtnk"]
 [ext_resource type="PackedScene" uid="uid://dh0l42ddbtam5" path="res://scenes/bottle.tscn" id="10_yyrhe"]
@@ -266,6 +267,7 @@ limit_left = -10000001
 limit_top = -10000001
 limit_right = 9999999
 limit_bottom = 159
+position_smoothing_enabled = true
 
 [node name="DeathZone" parent="." unique_id=341785383 instance=ExtResource("5_mxulj")]
 position = Vector2(56, 42)
@@ -384,13 +386,13 @@ vertical_alignment = 1
 [node name="Bottles" type="Node2D" parent="." unique_id=436588745]
 
 [node name="Bottle3" parent="Bottles" unique_id=1181306759 instance=ExtResource("10_yyrhe")]
-position = Vector2(104, 72)
+position = Vector2(169, 72)
 
 [node name="Bottle2" parent="Bottles" unique_id=1364550720 instance=ExtResource("10_yyrhe")]
 position = Vector2(712, 57)
 
 [node name="Bottle" parent="Bottles" unique_id=410404379 instance=ExtResource("10_yyrhe")]
-position = Vector2(328, 40)
+position = Vector2(312, 24)
 
 [node name="Docks" type="Node2D" parent="." unique_id=1042551556]
 
@@ -401,3 +403,12 @@ position = Vector2(216, -22)
 position = Vector2(433, 6)
 rotation = -3.1415927
 impulse_force = -450.0
+
+[node name="SignCheckpoint" parent="." unique_id=6584174 instance=ExtResource("6_3yl1h")]
+position = Vector2(104, 72)
+
+[node name="SignCheckpoint2" parent="." unique_id=1562102507 instance=ExtResource("6_3yl1h")]
+position = Vector2(344, 40)
+
+[node name="SignCheckpoint3" parent="." unique_id=2086592094 instance=ExtResource("6_3yl1h")]
+position = Vector2(887, -56)
