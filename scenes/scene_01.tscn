@@ -1,18 +1,19 @@
 [gd_scene format=4 uid="uid://bh3rnaun5tpqu"]
 
 [ext_resource type="PackedScene" uid="uid://bj4l8o0q3hgob" path="res://scenes/player.tscn" id="1_7jrgq"]
-[ext_resource type="Script" uid="uid://bmpaaca14mq8" path="res://game_manager.gd" id="1_dy84e"]
 [ext_resource type="PackedScene" uid="uid://d272mli26bnaf" path="res://scenes/hud.tscn" id="1_p86k1"]
-[ext_resource type="FontFile" uid="uid://cyg4kcgv1ykq5" path="res://resources/fonts/PixelOperator8-Bold.ttf" id="2_5iwry"]
 [ext_resource type="Texture2D" uid="uid://dwfqd4b8meivd" path="res://resources/sprites/world_tileset.png" id="2_dw6ru"]
 [ext_resource type="PackedScene" uid="uid://birgext3j1ci6" path="res://scenes/platform.tscn" id="3_o2il5"]
 [ext_resource type="PackedScene" uid="uid://b0o51ervbcifk" path="res://scenes/coin.tscn" id="4_nnx6g"]
 [ext_resource type="PackedScene" uid="uid://dkv42t7ygwhgh" path="res://scenes/death_zone.tscn" id="5_mxulj"]
-[ext_resource type="PackedScene" uid="uid://8dqsfkcrdg36" path="res://scenes/sing_checkpoint.tscn" id="6_3yl1h"]
+[ext_resource type="PackedScene" path="res://scenes/sing_checkpoint.tscn" id="6_3yl1h"]
 [ext_resource type="PackedScene" uid="uid://dqr5r80cdoouk" path="res://scenes/enemy.tscn" id="6_wtt3i"]
 [ext_resource type="FontFile" uid="uid://birlasfkpd2tv" path="res://resources/fonts/PixelOperator8.ttf" id="7_hxtnk"]
 [ext_resource type="PackedScene" uid="uid://dh0l42ddbtam5" path="res://scenes/bottle.tscn" id="10_yyrhe"]
 [ext_resource type="PackedScene" uid="uid://dkdh34g2fbm8" path="res://scenes/dock.tscn" id="11_3h8q1"]
+[ext_resource type="PackedScene" uid="uid://dcv74v5mj1v4f" path="res://scenes/finish.tscn" id="14_4oynf"]
+[ext_resource type="AudioStream" uid="uid://cyxgxfthlrx5o" path="res://resources/music/meta_recortado.wav" id="15_bbqnx"]
+[ext_resource type="PackedScene" uid="uid://cb8rij70wyee6" path="res://scenes/music.tscn" id="16_p0em8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o2il5"]
 texture = ExtResource("2_dw6ru")
@@ -227,24 +228,6 @@ metadata/_edit_vertical_guides_ = [-520.0]
 [node name="HUD" parent="." unique_id=818442567 instance=ExtResource("1_p86k1")]
 visible = false
 
-[node name="GameManager" type="Node" parent="." unique_id=735835799]
-unique_name_in_owner = true
-script = ExtResource("1_dy84e")
-
-[node name="LabelScore" type="Label" parent="GameManager" unique_id=608826804]
-offset_left = 402.0
-offset_top = -192.0
-offset_right = 593.0
-offset_bottom = -169.0
-rotation = -0.0010329646
-theme_override_colors/font_color = Color(0.09803922, 0.3137255, 0.7529412, 1)
-theme_override_fonts/font = ExtResource("2_5iwry")
-theme_override_font_sizes/font_size = 8
-text = "Has obtenido
-0 monedas"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="TileMap" type="Node2D" parent="." unique_id=546057567]
 
 [node name="Sky" type="TileMapLayer" parent="TileMap" unique_id=1137197994]
@@ -259,7 +242,7 @@ tile_map_data = PackedByteArray("AAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAMAAAAAAAA
 tile_set = SubResource("TileSet_nnx6g")
 
 [node name="Player" parent="." unique_id=131954681 instance=ExtResource("1_7jrgq")]
-position = Vector2(56, 48)
+position = Vector2(57, 48)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1521060126]
 position = Vector2(0, -5)
@@ -372,10 +355,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="Texts" unique_id=2049839379]
-offset_left = 401.0
-offset_top = -210.99998
-offset_right = 592.0
-offset_bottom = -187.99998
+offset_left = 384.0
+offset_top = -195.00002
+offset_right = 575.0
+offset_bottom = -172.00002
 rotation = -0.0010329646
 theme_override_colors/font_color = Color(0.09803922, 0.3137255, 0.7529412, 1)
 theme_override_fonts/font = ExtResource("7_hxtnk")
@@ -395,6 +378,9 @@ position = Vector2(712, 57)
 [node name="Bottle" parent="Bottles" unique_id=410404379 instance=ExtResource("10_yyrhe")]
 position = Vector2(312, 24)
 
+[node name="Bottle4" parent="Bottles" unique_id=2066959126 instance=ExtResource("10_yyrhe")]
+position = Vector2(568, -152)
+
 [node name="Docks" type="Node2D" parent="." unique_id=1042551556]
 
 [node name="Dock" parent="Docks" unique_id=1991276944 instance=ExtResource("11_3h8q1")]
@@ -405,11 +391,22 @@ position = Vector2(433, 6)
 rotation = -3.1415927
 impulse_force = -450.0
 
-[node name="SignCheckpoint" parent="." unique_id=6584174 instance=ExtResource("6_3yl1h")]
+[node name="CheckPoints" type="Node2D" parent="." unique_id=940834397]
+
+[node name="SignCheckpoint" parent="CheckPoints" unique_id=6584174 instance=ExtResource("6_3yl1h")]
 position = Vector2(104, 72)
 
-[node name="SignCheckpoint2" parent="." unique_id=1562102507 instance=ExtResource("6_3yl1h")]
+[node name="SignCheckpoint2" parent="CheckPoints" unique_id=1562102507 instance=ExtResource("6_3yl1h")]
 position = Vector2(344, 40)
 
-[node name="SignCheckpoint3" parent="." unique_id=2086592094 instance=ExtResource("6_3yl1h")]
+[node name="SignCheckpoint3" parent="CheckPoints" unique_id=2086592094 instance=ExtResource("6_3yl1h")]
 position = Vector2(887, -56)
+
+[node name="Finish" parent="." unique_id=1647642365 instance=ExtResource("14_4oynf")]
+position = Vector2(462, -152.00002)
+scale = Vector2(1, 1.025)
+music_final_level = ExtResource("15_bbqnx")
+
+[node name="Music" parent="." unique_id=1989299043 instance=ExtResource("16_p0em8")]
+unique_name_in_owner = true
+volume_db = 5.0

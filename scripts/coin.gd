@@ -1,6 +1,5 @@
 extends Area2D
 
-@onready var game_manager: Node = %GameManager
 @onready var music_coin: AudioStreamPlayer = $MusicCoin
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
@@ -9,7 +8,7 @@ var autoDestruction : bool = true
 signal play_destruction_animation
 
 func _on_body_entered(_body: Node2D) -> void:
-	game_manager.add_score()
+	GameManager.add_score()
 	music_coin.play()
 	collision_shape_2d.call_deferred("set", "disabled", true)
 	#queue_free() #Funcion que hay q llamar para eliminar un  nodo y sus hijos

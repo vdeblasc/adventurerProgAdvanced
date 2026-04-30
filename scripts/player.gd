@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	var direction := Input.get_axis("move_left", "move_right")
+	var direction := InputManager.get_axis("move_left", "move_right")
 	if direction > 0:
 		animated_sprite_2d.flip_h = false
 	elif direction < 0:
@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.play("jump")
 
 	if direction:
-		velocity.x = direction * (RUN_SPEED if must_run or Input.is_action_pressed("run") else SPEED)
+		velocity.x = direction * (RUN_SPEED if must_run or InputManager.is_action_pressed("run") else SPEED)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 

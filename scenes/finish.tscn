@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dcv74v5mj1v4f"]
+
+[ext_resource type="Texture2D" uid="uid://1vkdflxvsu55" path="res://resources/sprites/Meta.png" id="1_07gpw"]
+[ext_resource type="Script" uid="uid://chx2r63e12eld" path="res://scripts/finish.gd" id="2_2pftv"]
+[ext_resource type="AudioStream" uid="uid://c681yd8gmjdve" path="res://resources/music/meta.wav" id="3_2pftv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m504p"]
+size = Vector2(14.020203, 8.085108)
+
+[node name="Finish" type="Sprite2D" unique_id=1647642365]
+position = Vector2(5.9604645e-08, -31.000004)
+scale = Vector2(4, 3.798)
+texture = ExtResource("1_07gpw")
+script = ExtResource("2_2pftv")
+music_final_level = ExtResource("3_2pftv")
+scene_to_load = "uid://bh3rnaun5tpqu"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1284393504]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2060945299]
+position = Vector2(0.020201804, -0.97872347)
+scale = Vector2(1, 0.9999999)
+shape = SubResource("RectangleShape2D_m504p")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

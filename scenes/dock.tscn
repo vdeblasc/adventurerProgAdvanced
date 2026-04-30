@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dkdh34g2fbm8"]
 
 [ext_resource type="Texture2D" uid="uid://c3oy0h5xa43yr" path="res://resources/sprites/Muelle.png" id="1_pi7v4"]
-[ext_resource type="Script" uid="uid://cibjyc6r7swop" path="res://dock.gd" id="2_uvgon"]
+[ext_resource type="Script" uid="uid://cibjyc6r7swop" path="res://scripts/dock.gd" id="2_uvgon"]
 [ext_resource type="AudioStream" uid="uid://bolsdjlw1g40e" path="res://resources/sounds/muelle.wav" id="3_0n4n6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uvgon"]

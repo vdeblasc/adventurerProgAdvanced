@@ -5,11 +5,12 @@
 [ext_resource type="AudioStream" uid="uid://c2336k4ri6q5j" path="res://resources/sounds/jump.wav" id="3_qhqgy"]
 [ext_resource type="Script" uid="uid://devgtarpm8fwk" path="res://scripts/run_effect.gd" id="4_dqkch"]
 [ext_resource type="Material" uid="uid://b2u4s53b8ty0v" path="res://materials/powerUP_material.tres" id="5_qlg0r"]
-[ext_resource type="Script" uid="uid://di2fkp2c2ce1r" path="res://jump.gd" id="6_tuyoq"]
+[ext_resource type="Script" uid="uid://di2fkp2c2ce1r" path="res://scripts/jump.gd" id="6_tuyoq"]
 [ext_resource type="PackedScene" uid="uid://c7l071364yb1i" path="res://scenes/escape.tscn" id="7_smehm"]
 [ext_resource type="PackedScene" uid="uid://c442nomix7x4q" path="res://scenes/change_display_mode.tscn" id="8_ur7pv"]
-[ext_resource type="Script" uid="uid://snd5ojskuj6m" path="res://scripts/checkpoint.gd" id="9_ur7pv"]
+[ext_resource type="Script" path="res://scripts/checkpoint.gd" id="9_ur7pv"]
 [ext_resource type="AudioStream" uid="uid://da5barcv7mk42" path="res://resources/sounds/252083__pepingrillin__spawn.ogg" id="10_y4r1p"]
+[ext_resource type="Script" uid="uid://554xshxyqupp" path="res://scripts/level_final_arrival.gd" id="11_d2wvv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("1_3vyb7")
@@ -244,3 +245,6 @@ script = ExtResource("9_ur7pv")
 [node name="SoundRespawn" type="AudioStreamPlayer" parent="Checkpoint" unique_id=1154949969]
 stream = ExtResource("10_y4r1p")
 bus = &"SoundEffects"
+
+[node name="LevelFinalArrival" type="Node" parent="." unique_id=168538092]
+script = ExtResource("11_d2wvv")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c442nomix7x4q"]
 
-[ext_resource type="Script" uid="uid://c1k7wnwy6xcsl" path="res://change_display_mode.gd" id="1_bbx5j"]
+[ext_resource type="Script" uid="uid://c1k7wnwy6xcsl" path="res://scripts/change_display_mode.gd" id="1_bbx5j"]
 
 [node name="ChangeDisplayMode" type="Node" unique_id=1738059649]
 script = ExtResource("1_bbx5j")

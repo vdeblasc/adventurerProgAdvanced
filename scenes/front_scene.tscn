@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c442nomix7x4q" path="res://scenes/change_display_mode.tscn" id="3_bkuqt"]
 [ext_resource type="Texture2D" uid="uid://bkbu65bumeami" path="res://resources/sprites/knight.png" id="4_bkuqt"]
 [ext_resource type="TileSet" uid="uid://dimjsdx1mki0w" path="res://resources/tilesets/tilesets.tres" id="4_dns5v"]
+[ext_resource type="PackedScene" uid="uid://cb8rij70wyee6" path="res://scenes/music.tscn" id="6_3s1ag"]
 
 [sub_resource type="Animation" id="Animation_dns5v"]
 length = 0.001
@@ -194,3 +195,5 @@ autoplay = &"movement"
 position = Vector2(-45, 7)
 sprite_frames = SubResource("SpriteFrames_31x28")
 autoplay = "default"
+
+[node name="Music" parent="." unique_id=1989299043 instance=ExtResource("6_3s1ag")]
