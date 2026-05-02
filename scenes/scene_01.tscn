@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://birgext3j1ci6" path="res://scenes/platform.tscn" id="3_o2il5"]
 [ext_resource type="PackedScene" uid="uid://b0o51ervbcifk" path="res://scenes/coin.tscn" id="4_nnx6g"]
 [ext_resource type="PackedScene" uid="uid://dkv42t7ygwhgh" path="res://scenes/death_zone.tscn" id="5_mxulj"]
-[ext_resource type="PackedScene" path="res://scenes/sing_checkpoint.tscn" id="6_3yl1h"]
+[ext_resource type="PackedScene" uid="uid://8dqsfkcrdg36" path="res://scenes/sing_checkpoint.tscn" id="6_3yl1h"]
 [ext_resource type="PackedScene" uid="uid://dqr5r80cdoouk" path="res://scenes/enemy.tscn" id="6_wtt3i"]
 [ext_resource type="FontFile" uid="uid://birlasfkpd2tv" path="res://resources/fonts/PixelOperator8.ttf" id="7_hxtnk"]
+[ext_resource type="FontFile" uid="uid://cyg4kcgv1ykq5" path="res://resources/fonts/PixelOperator8-Bold.ttf" id="9_bbqnx"]
 [ext_resource type="PackedScene" uid="uid://dh0l42ddbtam5" path="res://scenes/bottle.tscn" id="10_yyrhe"]
 [ext_resource type="PackedScene" uid="uid://dkdh34g2fbm8" path="res://scenes/dock.tscn" id="11_3h8q1"]
 [ext_resource type="PackedScene" uid="uid://dcv74v5mj1v4f" path="res://scenes/finish.tscn" id="14_4oynf"]
@@ -367,6 +368,22 @@ text = "¡Lo conseguiste!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label4" type="Label" parent="Texts" unique_id=870848133]
+anchors_preset = -1
+offset_left = -48.0
+offset_top = -35.0
+offset_right = 55.0
+offset_bottom = -13.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("9_bbqnx")
+theme_override_font_sizes/font_size = 16
+text = "Level 1"
+metadata/_edit_use_anchors_ = true
+
 [node name="Bottles" type="Node2D" parent="." unique_id=436588745]
 
 [node name="Bottle3" parent="Bottles" unique_id=1181306759 instance=ExtResource("10_yyrhe")]
@@ -406,6 +423,7 @@ position = Vector2(887, -56)
 position = Vector2(462, -152.00002)
 scale = Vector2(1, 1.025)
 music_final_level = ExtResource("15_bbqnx")
+scene_to_load = "uid://d2kfffitf5rar"
 
 [node name="Music" parent="." unique_id=1989299043 instance=ExtResource("16_p0em8")]
 unique_name_in_owner = true
