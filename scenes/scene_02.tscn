@@ -185,7 +185,6 @@ sources/0 = SubResource("TileSetAtlasSource_o2il5")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wtt3i"]
 
 [node name="Scene_02" type="Node2D" unique_id=1167644313]
-position = Vector2(-38, 1)
 metadata/_edit_vertical_guides_ = [-520.0]
 
 [node name="HUD" parent="." unique_id=818442567 instance=ExtResource("1_gim5l")]
@@ -416,9 +415,6 @@ position = Vector2(1201, 10)
 
 [node name="Dock6" parent="Docks" unique_id=194382845 instance=ExtResource("10_xyl61")]
 position = Vector2(1184, -86)
-
-[node name="Dock7" parent="Docks" unique_id=2028900831 instance=ExtResource("10_xyl61")]
-position = Vector2(1439, -187)
 
 [node name="Dock8" parent="Docks" unique_id=182774342 instance=ExtResource("10_xyl61")]
 position = Vector2(760, -102)

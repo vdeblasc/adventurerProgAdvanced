@@ -28,36 +28,18 @@ text = "Comenzar"
 [node name="ButtonExit" type="Button" parent="." unique_id=1629838702]
 anchors_preset = -1
 anchor_left = 0.503
-anchor_top = 0.45400003
+anchor_top = 0.40300003
 anchor_right = 0.503
-anchor_bottom = 0.45400003
-offset_left = -73.956055
-offset_top = -17.192017
-offset_right = 75.043945
-offset_bottom = 17.807983
+anchor_bottom = 0.40300003
+offset_left = -72.456055
+offset_top = -17.144012
+offset_right = 76.543945
+offset_bottom = 17.855988
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
 theme = ExtResource("1_cwjrt")
 text = "Salir"
-
-[node name="ButtonContinue" type="Button" parent="." unique_id=761335029]
-anchors_preset = -1
-anchor_left = 0.503
-anchor_top = 0.39200002
-anchor_right = 0.503
-anchor_bottom = 0.39200002
-offset_left = -74.956055
-offset_top = -18.016006
-offset_right = 76.043945
-offset_bottom = 17.983994
-grow_horizontal = 2
-grow_vertical = 2
-focus_mode = 0
-theme = ExtResource("1_cwjrt")
-disabled = true
-text = "Continuar
-"
 
 [node name="Label" type="Label" parent="." unique_id=516818363]
 anchors_preset = -1
@@ -81,4 +63,3 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="ButtonStart" to="." method="_on_button_start_pressed"]
 [connection signal="pressed" from="ButtonExit" to="." method="_on_button_exit_pressed"]
-[connection signal="pressed" from="ButtonContinue" to="." method="_on_button_continue_pressed"]

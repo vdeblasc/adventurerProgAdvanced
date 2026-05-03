@@ -8,7 +8,6 @@ var distance_to_travel: float = 28
 var duration_animation: float = 0.5
 
 func _ready() -> void:
-	#coin.body_entered.connect(_on_body_entered)
 	coin.play_destruction_animation.connect(_on_play_destruction_animation)
 	coin.autoDestruction = false
 	
